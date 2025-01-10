@@ -1,0 +1,1615 @@
+JAVA CLASS PROGRAMS 
+
+1)Creating a array of size n and getting the elements as input and printing its sum
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main (String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the size of array:");
+        int n=in.nextInt();
+        int a[]= new int[n];      // an empty array with size n
+        System.out.println("Enter the elements:");
+        for (int i=0; i<n;i++)
+        {
+            a[i]=in.nextInt();    // Getting input for array
+        }
+        int sum=in.nextInt();     // Declaring another variable sum
+        sum=0;                    // declaring sum as 0
+        for (int i=0;i<n;i++)
+        {
+            sum=sum+a[i];
+        }
+        System.out.println("Sum of elements of the array "+ sum);
+    }
+}
+
+
+2) Intersection of elements (element as well as index)
+
+import java.util.Arrays;
+class Main
+{
+    public static void main(String [] args)
+    {
+        int arr1[]={3,2,11,4,6,7};
+        int n1=arr1.length;
+        int arr2[]={1,2,3,4,11,7};
+        for (int i=0;i<n1;i++)
+        {
+                if (arr1[i]==arr2[i])
+                {
+                    System.out.print(arr1[i]+" ");
+                }
+        }
+    }
+}
+
+
+3) Missing of elements in array
+
+import java.util.Arrays;
+class Main 
+{
+    public static void main(String args [])
+    {
+        int arr[]={12,13,15,17,18,20,24};
+        Arrays.sort(arr);
+        int j=1;
+        for(int i=arr[0];i<arr[arr.length-1];i++)
+        {
+            if(i!=arr[j-1])
+            {
+                System.out.print(i+" ");
+            }
+            else
+            {
+                j++;
+            }
+        }
+    }
+}
+
+
+
+
+4) Duplicate elements
+
+class Main 
+{
+    public static void main(String [] args)
+    {
+        int arr[]={12,4,6,12,7,6};
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if (arr[i]==arr[j])
+                {
+                    System.out.print(arr[i]+ " ");
+                }
+            }
+        }
+    }
+}
+
+
+5) Second largest and second smallest
+
+import java.util.Arrays;
+class Main 
+{
+    public static void main(String [] args)
+    {
+        int arr[]={12,4,6,12,7,6};
+        Arrays.sort(arr);
+        int n=arr.length;
+        System.out.println("Second Smallest "+arr[1]);
+        System.out.println("Second Largest "+arr[n-2]);
+    }
+}
+
+
+
+6) to reverse a string using reverse function(java)
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+        String rev = new StringBuilder(s).reverse().toString();
+        if (s.equals(rev)) {
+            System.out.println("The string is a palindrome.");
+        } else {
+            System.out.println("The string is not a palindrome.");
+        }
+        sc.close();
+    }
+}
+
+
+
+7) to print values from args
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        System.out.print(args[2]+args[3]);
+    }
+}
+
+
+8) to print sum of numbers from args
+
+class Main 
+{
+    public static void main(String args [])
+    {
+        int a=Integer.parseInt(args[2]);   # to convert the string in arg to int in arg(arg==array)
+        int b=Integer.parseInt(args[3]);
+        System.out.print(a+b);
+    }
+}
+
+
+9) to print the elements of array using for loop
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        int arr[]={1,2,4,5,6,7,8};
+        for (int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
+10) to print the elements of array using for each loop
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        int arr[]={1,2,3,4,5,6,7,8};
+        for(int a : arr)
+        {
+            System.out.print(a+" ");
+        }
+    }
+}
+
+11) to declare the elements for array separately after declaring the array with size
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        int arr[]=new int[5];    // declaring array with size
+        arr[0]=96;
+        arr[1]=12;
+        arr[2]=54;
+        arr[3]=76;
+        arr[4]=39;
+        for(int a:arr)
+        {
+            System.out.print(a+" ");
+        }
+    }
+}
+
+
+12) to get array size and its elements are input and calculate sum of the array
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+       Scanner in = new Scanner(System.in);
+       System.out.println("Enter the size of array");
+       int n=in.nextInt();
+       int arr[]=new int[n];
+       System.out.println("Enter the array elements");
+       for (int i=0;i<n;i++)
+       {
+           System.out.print("a["+(i+1)+"]= ");
+           arr[i]=in.nextInt();
+       }
+       int sum=0;
+       for(int i=0;i<n;i++)
+       {
+           sum=sum+arr[i];
+       }
+       System.out.println("The sum of the array is: "+sum);
+    }
+}
+
+
+13) to print second largest element
+
+import java.util.Arrays;
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the size of array:");
+        int n = in.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.print("a["+(i+1)+"]= ");
+            arr[i]=in.nextInt();
+        }
+        Arrays.sort(arr);
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        System.out.println("Second largest element is "+arr[1]);
+    }
+}
+
+
+14) the kth smallest element
+
+import java.util.Arrays;
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        int k=in.nextInt();
+        int arr[]={12,31,45,27,8};
+        int n=arr.length;
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        if (k<=n)
+        {
+            Arrays.sort(arr);
+            for(int i=0;i<n;i++)
+            {
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println("The "+k+"th element of the array is "+arr[k+1]);
+        }
+        else
+        {
+            System.out.println("give a value of k less than the length of array");
+        }
+    }
+}
+
+
+
+15) to print the first letter of a string (using charAt())
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        String str="Hello";
+        char result=str.charAt(0);
+        System.out.println(result);
+    }
+}
+
+
+======================================================CONSTRUCTOR===============================================
+
+16) using constructor 
+
+class Main 
+{
+    int id;
+    String name;
+    Main(int i,String n)
+    {
+        id=i;
+        name=n;
+    }
+    Main(int in)
+    {
+        id=in;
+    }
+    void display()
+    {
+        System.out.println(id+" "+name);
+    }
+    public static void main(String args[])
+    {
+        Main s1=new Main(111,"Karan");
+        Main s2=new Main(222);
+        s1.display();
+        s2.display();
+    }
+}
+
+
+17) without "this" keyword
+
+class Main 
+{
+   int id;
+   String name;
+   float fee;
+   
+   Main(int i, String n, float fees)   // see here the class variable and constructor variables are different, so no need of this keyword
+   {
+       id=i;
+       name=n;
+       fee=fees;
+   }
+   void display()
+   {
+       System.out.println(id+" "+name+" "+fee);
+   }
+   public static void main(String args[])
+   {
+       Main s1=new Main(111,"Amit",6000f);
+       s1.display();
+   }
+}
+
+
+
+18) with "this" keyword
+
+class Main 
+{
+   int id;
+   String name;
+   float fee;
+   
+   Main(int id, String name, float fee)      //see here the class variable and constructor variables are same, so need of this keyword
+   {                                         // if this keyword is not used then answer will "0 null 0.0"
+       this.id=id;
+       this.name=name;
+       this.fee=fee;
+   }
+   void display()
+   {
+       System.out.println(id+" "+name+" "+fee);
+   }
+   public static void main(String args[])
+   {
+       Main s1=new Main(111,"Amit",6000f);
+       s1.display();
+   }
+}
+
+
+19) "this" can be used for methods
+
+class Main 
+{
+    void n()
+    {
+        System.out.println("hello.n");
+    }
+    void m()
+    {
+        System.out.println("hello.m");
+        this.n();
+    }
+    public static void main(String args[])
+    {
+        Main a = new Main();
+        a.m();
+    }
+}
+
+
+20) using "this" for both method and variables
+
+class Main 
+    {
+    int value;
+
+    Main(int value) 
+    {
+        this.value = value;     // for variable
+    }
+
+    void display() 
+    {
+        System.out.println("Value: " + this.value);
+    }
+
+    void callDisplay() 
+    {
+        this.display();        // for methods
+    }
+
+    public static void main(String[] args) 
+    {
+        Main obj = new Main(42);
+        obj.callDisplay(); 
+    }
+}
+
+21) with some parameters inside "this" keyword
+
+class A
+{
+    A()
+    {
+        this(5);
+        System.out.println("hello a");
+    }
+    A(int x)
+    {
+        System.out.println("hello "+ x);
+    }
+}
+class Main 
+{
+    public static void main (String[] args) 
+    {
+        A a = new A();
+    }
+}
+
+
+==========================================default,abstract,interface=========================================
+
+22) using Interface using default method
+
+interface Printable {
+    default void print() {
+        System.out.println("Hello");    // here it is default method
+    }
+}
+
+class Main implements Printable {
+    // No need to implement the print method; it is already defined in the interface
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.print(); 
+}
+
+23) using Interface using abstract method
+
+interface Printable {
+    void print();               // Abstract method, in abstract method we can't write anything(In abstract methods, you cannot include any implementation, such as System.out.println("Hello");. Abstract methods are purely declarations of what a method should do, leaving the actual implementation to the subclass or implementing class.
+
+)
+}
+
+class Main implements Printable {
+    public void print() {
+        System.out.println("Hello");
+    }
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+        obj.print(); 
+    }
+}
+
+
+
+24) Abstract method:  When you have common functionality that applies to multiple classes but need specific implementations in each subclass.
+
+abstract class Animal {
+    abstract void makeSound();
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Woof Woof!");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound() {
+        System.out.println("Meow Meow!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+
+        animal1.makeSound();
+        animal2.makeSound(); 
+    }
+}
+
+
+25) using Interface in 24) code or above code
+
+
+interface Animal {
+    void makeSound(); 
+}
+
+class Dog implements Animal {
+   
+    public void makeSound() {
+        System.out.println("Woof Woof!");
+    }
+}
+
+class Cat implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Meow Meow!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Dog(); 
+        Animal animal2 = new Cat();
+
+        animal1.makeSound(); 
+        animal2.makeSound();
+    }
+}
+
+26) A code that differentiates between Interface and Abstract class (Interface I:nterfaces allow a class to implement multiple interfaces, providing greater flexibility than inheritance from a single abstract class, whereas abstract allows only one)
+
+interface Camera {
+    void takePhoto();
+    void recordVideo();
+}
+interface Phone {
+    void makeCall(String number);
+    void sendText(String number, String message);
+}
+
+class SmartPhone implements Camera, Phone {   // see here two classes are called at a time
+    public void takePhoto() {
+        System.out.println("Taking a photo...");
+    }
+    public void recordVideo() {
+        System.out.println("Recording a video...");
+     }
+    public void makeCall(String number) {
+        System.out.println("Calling " + number + "...");
+    }
+
+    @Override
+    public void sendText(String number, String message) {
+        System.out.println("Sending text to " + number + ": " + message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SmartPhone myPhone = new SmartPhone();
+        myPhone.takePhoto();
+        myPhone.recordVideo();
+        myPhone.makeCall("123-456-7890");
+        myPhone.sendText("123-456-7890", "Hello from my SmartPhone!");
+    }
+}
+
+27) Example of interface
+
+interface Polygon
+{
+    void getArea();
+    default void getsides()
+    {
+        System.out.println("I can get sides of a poylgon.");
+    }
+}
+class Rectangle implements Polygon
+{
+    public void getArea()
+    {
+        int length = 6;
+        int breadth = 5;
+        int area = length*breadth;
+        System.out.println("The area of the rectangle is "+area);
+    }
+    public void getsides()
+    {
+        System.out.println("I have 4 sides");     //overrides the getsides from interface(System.out.println("I can get sides of a poylgon.");)
+    }
+}
+class Square implements Polygon
+{
+    public void getArea() 
+    {
+        int length = 5;
+        int area = length * length;
+        System.out.println("The area of the square is " + area);
+    }
+    public void getsides() 
+    {
+        System.out.println("I also have 4 sides.");     //
+    }
+}
+class Main {
+    public static void main(String[] args) 
+    {
+        Polygon rec = new Rectangle();
+        rec.getArea();
+        rec.getsides();
+        Polygon sq = new Square();
+        sq.getArea();
+        sq.getsides();
+    }
+}
+
+28) Example of abstract class
+
+abstract class MotorBike
+{
+    abstract void brake();
+}
+class SportsBike extends MotorBike
+{
+    public void brake()
+    {
+        System.out.println("SportsBike Brake");
+    }
+}
+class MountainBike extends MotorBike
+{
+    public void brake()
+    {
+        System.out.println("MountainBike Brake");
+    }
+}
+class Main 
+{
+    public static void main(String args [])
+    {
+        MountainBike m1 = new MountainBike();
+        m1.brake();
+        SportsBike s1 = new SportsBike();
+        s1.brake();
+    }
+}
+=================================================Strings============================================
+
+22) to find the frequency of occurence of every element in string
+
+class Main 
+{
+    public static void main(String args [])
+    {
+        String s="Javaavaavv";
+        boolean arr[]=new boolean[s.length()];
+    
+        for(int i=0;i<s.length();i++)
+        {
+           if (arr[i])
+           {
+               continue;
+           }
+           int count=1;
+            for (int j=i+1;j<s.length();j++)
+            {
+                if (s.charAt(i)==s.charAt(j))
+                {
+                    arr[j]=true;
+                    count=count+1;
+                    
+                }
+            
+            }
+            System.out.print(s.charAt(i)+" ");
+            System.out.println(count);
+        }
+    }
+}
+
+
+==========================================Inheritance================================================
+
+
+23) Single Inheritance
+
+class Animal
+{
+    void eat()
+    {
+        System.out.println("Eating....");
+    }
+}
+class Dog extends Animal
+{
+    void bark()
+    {
+        System.out.println("Barking....");
+    }
+}
+class Main 
+{
+    public static void main(String args[])
+    {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+
+
+24) Multilevel Inheritance
+
+class Animal 
+{
+    void eat()
+    {
+        System.out.println("Eating....");
+    }
+}
+class Dog extends Animal
+{
+    void bark()
+    {
+        System.out.println("Barking....");
+    }
+}
+class BabyDog extends Dog
+{
+    void weep()
+    {
+        System.out.println("Weeping....");
+    }
+}
+class Main 
+{
+    public static void main(String args[])
+    {
+        BabyDog d = new BabyDog();
+        d.eat();
+        d.weep();
+        d.bark();
+    }
+}
+
+
+25) general 
+
+class Animal
+{
+    void eat()
+    {
+        System.out.println("eating....");
+    }
+}
+class Dog extends Animal
+{
+    void bark()
+    {
+        System.out.println("barking....");
+    }
+}
+class Cat extends Animal
+{
+    void meow()
+    {
+        System.out.println("meowing....");
+    }
+}
+class Main 
+{
+    public static void main (String args[])
+    {
+        Cat c = new Cat();
+        c.meow();
+        c.eat();
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+
+
+
+26) Multiple Inheritance is not possible
+
+class A 
+{
+    void msg()
+    {
+        System.out.println("hello");
+    }
+}
+class B 
+{
+    void mssg()
+    {
+        System.out.println("welcome");
+    }
+}
+class Main extends A, B    // This statement "A,B" is invalid
+{
+    public static void main(String args[])
+    Main obj = new Main();
+    obj.msg();
+    obj.mssg();
+}
+
+
+
+27) Java program to count the number of occurence of an element in an array
+
+import java.util.Scanner;
+import java.util.Arrays;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the size of array");
+        int n = in.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            int k = in.nextInt();
+            arr[i]=k;
+        }
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i+1;j<n;j++)
+            {
+                if (arr[i]==arr[j])
+                {
+                    System.out.println("Occuring Elements "+arr[j]);
+                }
+            }
+        }
+    }
+}
+
+
+28) how to convert string to integer
+
+class Main {
+    public static void main(String args[]) {
+        String x = "67";
+        String y = "3";
+
+        // Convert strings to integers manually
+        int a = stringToInt(x);
+        int b = stringToInt(y);
+
+        // Print the results
+        System.out.println("Integer value of a: " + a);
+        System.out.println("Integer value of b: " + b);
+    }
+
+29) write a program to remove given characters from strings
+
+class Main
+{
+    public static String remove(String str, char rem)
+    {
+        StringBuilder result = new StringBuilder();
+        for (char c : str.toCharArray()) 
+        {
+            if (c != rem) 
+            { 
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+
+    public static void main(String[] args) 
+    {
+        String str = "Hello World";
+        char rem = 'l'; 
+        String output = remove(str, rem);
+
+        System.out.println("Input String: " + str);
+        System.out.println("Output String: " + output);
+    }
+}
+
+
+30) how to count the number of words in a given sentence
+
+class Main 
+{
+    public static void main(String[] args) 
+    {
+        String sentence = "Hello, how are you doing today?";
+        int wordCount = sentence.trim().split("\\s+").length;         //trim is used to cut the spaces before and after and split is used to take whitespaces whereas + considers one and more whitespaces
+        System.out.println("Sentence: " + sentence);
+        System.out.println("Number of words: " + wordCount);
+    }
+}
+
+
+31) how to reverse a string in java word by word
+
+class Main {
+    public static String reverseWords(String sentence) {
+        String[] words = sentence.trim().split("\\s+");
+        StringBuilder reversed = new StringBuilder();
+
+        for (int i = words.length - 1; i >= 0; i--) {
+            reversed.append(words[i]);
+            if (i != 0) {
+                reversed.append(" ");
+            }
+        }
+
+        return reversed.toString();
+    }
+
+    public static void main(String[] args) {
+        String sentence = "Hello World from Java";
+        String result = reverseWords(sentence);
+        System.out.println("Original: " + sentence);
+        System.out.println("Reversed: " + result);
+    }
+}
+
+
+
+======================================ArrayList================================
+
+32) How to find Intersection elements in ArrayList
+
+import java.util.ArrayList;
+class Main 
+{
+    public static void main(String args[])
+    {
+        ArrayList<Integer>arr1 = new ArrayList<>();
+        arr1.add(56);
+        arr1.add(34);
+        arr1.add(12);
+        System.out.println("ArrayList1: "+ arr1);
+        ArrayList<Integer>arr2 = new ArrayList<>();
+        arr2.add(78);
+        arr2.add(33);
+        arr2.add(12);
+        System.out.println("ArrayList1: "+ arr2);
+        for(int i=0;i<arr1.size();i++)
+        {
+            for(int j=0;j<arr2.size();j++)
+            {
+                if (arr1.get(i).equals(arr2.get(j)))
+                {
+                    System.out.println("Intersecting elements are: "+ arr1.get(i));
+                }
+            }
+        }
+    }
+}
+
+
+33) Find the missing elements in ArrayList
+
+import java.util.Scanner;
+import java.util.ArrayList;
+class Main 
+{
+    public static void main(String args [])
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter the size of the Array List");
+        int n = in.nextInt();
+        ArrayList<Integer>arr = new ArrayList<>();
+        System.out.println("Enter the elements of array");
+        for(int i=0;i<n;i++)
+        {
+            int a = in.nextInt();
+            arr.add(a);
+        }
+        System.out.println(arr);
+        int j=0;
+        for(int i=arr.get(0);i<arr.get(arr.size()-1);i++)
+        {
+            if (arr.get(j)!=i)
+            {
+                System.out.print(i+" ");
+            }
+            else
+            {
+                j=j+1;
+            }
+        }
+    }
+}
+
+
+======================================String Builder class=============================================
+Commonly Used Methods:
+1)append(String s): Appends the specified string to the current sequence.
+StringBuilder sb = new StringBuilder("Hello");
+sb.append(" World");
+System.out.println(sb); 
+
+
+2)insert(int offset, String s): Inserts the specified string at the given position.
+StringBuilder sb = new StringBuilder("Hello");
+sb.insert(5, " Java");
+System.out.println(sb); 
+
+
+3)delete(int start, int end): Removes characters from the specified start index to the end index.
+StringBuilder sb = new StringBuilder("Hello World");
+sb.delete(5, 11);
+System.out.println(sb); 
+
+
+4)replace(int start, int end, String s): Replaces characters between start and end with the specified string.
+StringBuilder sb = new StringBuilder("Hello World");
+sb.replace(6, 11, "Java");
+System.out.println(sb); 
+
+
+5)reverse(): Reverses the sequence of characters.
+StringBuilder sb = new StringBuilder("Hello");
+sb.reverse();
+System.out.println(sb); 
+
+
+6)toString(): Converts the StringBuilder object back to a String.
+StringBuilder sb = new StringBuilder("Hello");
+String str = sb.toString();
+System.out.println(str); 
+
+
+
+Example Use Case: String Manipulation
+public class Main {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Java");
+        sb.append(" Programming"); // Adds " Programming" to "Java"
+        sb.insert(5, "is fun ");   // Inserts "is fun " after "Java "
+        sb.replace(8, 11, "awesome"); // Replaces "fun" with "awesome"
+        sb.delete(14, 23);          // Removes "Programming"
+        System.out.println(sb);    // Output: Java is awesome
+    }
+}
+
+============================================abstract,default,interface=======================================================
+
+34) interface (without default)
+
+interface Printable 
+{
+    void print(); 
+}
+
+class Main implements Printable 
+{
+    public void print() 
+    {
+        System.out.println("Hello");
+    }
+
+    public static void main(String[] args) 
+    {
+        Main obj = new Main();
+        obj.print();
+    }
+}
+
+
+35) interface(default)
+
+interface Printable 
+{
+    default void print() 
+    {
+        System.out.println("Hello");
+    }
+}
+
+class Main implements Printable 
+{
+    public static void main(String[] args) 
+    {
+        Main obj = new Main();
+        obj.print();
+    }
+}
+
+===============================================================Collection=========================================================================
+Array List:
+   Syntax: ArrayList<data-type>list1 = new ArrayList();
+Linked List:   data and link(node)
+   Syntax: List<data-type>list2 = new LinkedList();
+Vector:
+   Syntax: List<data-type>list3 = new Vector();
+Stack:
+   Syntax: List<data-type>list4 = new Stack();
+
+36) Array List example
+
+import java.util.ArrayList;
+import java.util.Iterator;
+class Main 
+{
+    public static void main(String args [])
+    {
+        ArrayList<String> animals = new ArrayList<>();
+        animals.add("Dog");
+        animals.add("Cat");
+        animals.add("Horse");
+        Iterator<String> itr = animals.iterator();
+        while(itr.hasNext())
+        {
+            System.out.println(itr.next());
+        }
+        System.out.println("ArrayList: "+animals);
+        System.out.println("Returning element: "+ animals.get(0));
+        animals(0,"Fish");
+        System.out.println("After changing values: "+animals);
+        for(String a:animals)
+        {
+            System.out.println(a);
+        }
+    }
+}
+
+37) Stack Example
+
+import java.util.Stack;
+class Main 
+{
+    public static void main(String args [])
+    {
+        Stack<Integer>stk=new Stack<>();
+        System.out.println("Is the stack empty? "+stk.empty());
+        stk.push(43);
+        stk.push(19);
+        stk.push(65);
+        stk.push(90);
+        System.out.println("Elements in the stack"+stk);
+        System.out.println("Is the stack empty? "+stk.empty());
+    }
+}
+
+38) Queue Example
+
+import java.util.*;
+class Main 
+{
+    public static void main(String args [])
+    {
+        PriorityQueue<String>queue=new PriorityQueue<String>();
+        queue.add("Apple");
+        queue.add("Banana");
+        queue.add("Lichi");
+        queue.add("Mango");
+        System.out.println("head: "+queue.element());     // returns error if queue is empty
+        System.out.println("head: "+queue.peek());          // returns null if queue is empty
+        System.out.println("Iterating elements:"); 
+        Iterator<String> itr = queue.iterator();
+        while(itr.hasNext())
+        {
+            System.out.println(itr.next());
+        }
+    }
+}
+ 
+=============================================Threads=========================================
+
+39) Threading Example
+
+Thread is an existing class which work for Threads
+The method run is invoked in main class using start
+The output is printed in random order
+
+class ThreadA extends Thread{
+     public void run( ) {
+        for(int i = 1; i <= 5; i++) {
+           System.out.println("From Thread A with i = "+ -1*i);
+        }
+        System.out.println("Exiting from Thread A ...");
+     }
+}
+
+class ThreadB extends Thread {
+    public void run( ) {
+       for(int j = 1; j <= 5; j++) {
+         System.out.println("From Thread B with j= "+2* j);
+       }
+       System.out.println("Exiting from Thread B ...");  
+	}
+}
+class ThreadC extends Thread{
+     public void run( ) {
+         for(int k = 1; k <= 5; k++) {
+             System.out.println("From Thread C with k = "+ (2*k-1));
+         }
+         System.out.println("Exiting from Thread C ...");
+     }
+}
+
+public class Main {
+    public static void main(String args[]) {
+         ThreadA a = new ThreadA();
+         ThreadB b = new ThreadB();
+         ThreadC c = new ThreadC();
+         a.start();
+         b.start();
+         c.start();
+         System.out.println("... Multithreading is over ");
+    }
+}
+
+
+40) example
+
+class Threadx implements Runnable
+{
+    public void run()
+    {
+        for(int i=1;i<=5;i++)
+        {
+            System.out.println("Thread X with i="+-1*i);
+        }
+        System.out.println("Existing Thread X....");
+    }
+}
+class Thready implements Runnable
+{
+    public void run()
+    {
+        for(int j=1;j<=5;j++)
+        {
+            System.out.println("Thread Y with j="+2*j);
+        }
+        System.out.println("Existing Thread Y....");
+    }
+}
+class Threadz implements Runnable
+{
+    public void run()
+    {
+        for(int k=1;k<=5;k++)
+        {
+            System.out.println("Thread Z with k="+(2*k-1));
+        }
+        System.out.println("Existing Thread Z....");
+    }
+}
+class Main 
+{
+    public static void main(String args [])
+    {
+        Threadx x = new Threadx();
+        Thread t1 = new Thread(x);
+        Thready y = new Thready();
+        Thread t2 = new Thread(y);
+        Threadz z = new Threadz();
+        Thread t3 = new Thread(z);
+        t1.start();
+        t2.start();
+        t3.start();
+        System.out.println("...Multithreading is over");
+    }
+}
+
+==============================================basic programs==========================================
+1) fibonacci series
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number of terms you want:");
+        int n=in.nextInt();
+        int a,b,c;
+        a=0;
+        b=1;
+        System.out.print(a+" "+b+" ");
+        for(int i=0;i<n-2;i++)
+        {
+            c=a+b;
+            System.out.print(c+" ");
+            a=b;
+            b=c;
+        }
+
+        
+    }
+}
+
+2) to check whether a number is prime or not
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int x =in.nextInt();
+        int count=0;
+        for(int i=1;i<=x;i++)
+        {
+            if(x%i==0)
+            {
+                count++;
+            }
+            
+        }
+        if (count ==2)
+        {
+            System.out.println("Yes! "+x+" is a prime number");
+        }
+        else
+        {
+            System.out.println("No! "+x+" is not a prime number");
+        }
+    }
+}
+
+3) to check palindrome 
+
+import java.util.Scanner;
+// java.util.String;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a String");
+        String s= in.nextLine();
+        int n=s.length();
+        int n1=n-1;
+        System.out.println("Original String: ");
+        for(int i=0;i<s.length();i++)
+        {
+            System.out.print(s.charAt(i)+" ");
+        }
+        System.out.println();
+        System.out.println("Reversed String: ");
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)==s.charAt(n1-i))
+            {
+                System.out.print(s.charAt(i)+" ");
+            }
+            else
+            {
+                System.out.print("Reversed String: "+s.charAt(i)+" ");
+            }
+            
+        }
+        
+    }
+}
+
+4) factorial  
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int n = in.nextInt();
+        int fact=1;
+        for(int i=1;i<=n;i++)
+        {
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+n+" is "+fact);
+    }
+}
+
+5) armstrong number
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int n = in.nextInt();
+        int sum=0;
+        String s1 = String.valueOf(n);
+        for(int i=0;i<s1.length();i++)
+        {
+            char ch = s1.charAt(i);
+            int n1 = Integer.valueOf(ch);
+            sum = sum+n1;
+        }
+        if(sum==n)
+        {
+            System.out.println("It is a armstrong number");
+        }
+    }
+}
+
+6) Generating a random number 
+
+import java.lang.Math;
+class Main 
+{
+    public static void main(String args[])
+    {
+        System.out.println(Math.random());
+    }
+}
+
+7) Printing patterns 
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            System.out.print("*".repeat(i));
+            System.out.println();
+        }
+    }
+}
+
+8) to get ascii values 
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        char ch1 = 'a';
+        char ch2 = 'b';
+        int c1 = ch1;
+        int c2 =ch2;
+        System.out.println(ch1+":"+c1);
+        System.out.println(ch2+":"+c2);
+    }
+}
+
+==================================================Patterns Questions===========================================
+
+1) class Main 
+{
+    public static void main(String args[])
+    {
+        for(int i=0;i<=3;i++)
+        {
+            for(int j=0;j<=4;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+2) (I)to print hollow rectangle 
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        for(int i=0;i<=3;i++)
+        {
+            if(i==0 || i==3)
+            {
+                for(int j=0;j<=4;j++)
+                {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+            else if(i==1||i==2)
+            {
+                for(int j=0;j<=4;j++)
+                {
+                    if(j==0 || j==4)
+                    {
+                        System.out.print("*");
+                    }
+                    else{
+                        System.out.print(" ");
+                    }
+                }
+                System.out.println();
+            }
+            
+        }
+    }
+}
+
+
+
+2)(II) optimised code
+
+class Main 
+{
+    public static void main(String args[])
+    {
+        for(int i=0;i<=3;i++)
+        {
+            for(int j=0;j<=4;j++)
+            {
+                if (i==0 || i==3 || j==0 || j==4)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+3) half pyramid
+
+import java.util.Scanner;
+class Main 
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            System.out.println("*".repeat(i));
+        }
+    }
+}
+
+4) Inverted Half Pyramid
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        
+        // Loop starts from n and goes down to 1
+        for (int i = n; i >= 1; i--) {
+            System.out.println("*".repeat(i));  
+        }
+    }
+}
+
+5) Inverted Half Pyramid(Rotated by 180)
+
+import java.util.Scanner;
+
+class Main 
+{
+    public static void main(String args[]) 
+    {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            System.out.print(" ".repeat(n-i)+"*".repeat(i));
+            System.out.println();
+        }
+    }
+}
