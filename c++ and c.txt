@@ -1,0 +1,190 @@
+First
+Last
+Middle
+	First = 0
+	Last = Length - 1
+	Middle = (First + Last)/2
+
+//Binary Search
+#include<iostream.h>
+#include<conio.h>
+#define max 25
+void binary(int a[max],int first,int last,int s)
+{
+int middle=(first+last)/2;
+if(a[middle]==s)
+cout<<"\nThe Element found at the Position : "<<middle;
+else if(first==last)
+cout<<"\nThe Element not found in the Array";
+else if(a[middle]<s)
+{
+first=middle+1;
+binary(a,first,last,s);
+}
+else
+{
+last=middle-1;
+binary(a,first,last,s);
+}
+}
+void main()
+{
+int a[max],n,s,i,j;
+clrscr();
+cout<<"\nEnter the Size of the Array :";
+cin>>n;
+if(n<=max)
+{
+cout<<"\nEnter the Array Elements :\n";
+for(i=0;i<n;i++)
+{
+cin>>a[i];
+}
+cout<<"\nThe Entered Array is : \n";
+for(i=0;i<n;i++)
+{
+cout<<a[i]<<" ";
+}
+cout<<"\nPress any key to Sort the Array .....";
+getch();
+clrscr();
+int temp;
+for(i=0;i<n;i++)
+{
+	for(j=i+1;j<n;j++)
+	{
+		if(a[i]>a[j])
+		{
+		temp=a[i];
+		a[i]=a[j];
+		a[j]=temp;
+		}
+	}
+}
+cout<<"\nThe Sorted Array is :\n";
+for(i=0;i<n;i++)
+{
+cout<<a[i]<<" ";
+}
+cout<<"\nEnter the Element to be Searched : ";
+cin>>s;
+int first=0,last=n-1;
+binary(a,first,last,s);
+}
+else
+cout<<"\nINvalid Size";
+getch();
+}
+
+
+
+#include<stdio.h>
+int memo[20];
+int rec(int n,int a,int b,int c)
+{
+    if(n==1) return a;
+    if(n==2) return b;
+    if(n==3) return c;
+    
+    if(memo[n]!=-1)
+    {
+        return memo[n];
+    }
+    memo[n]=rec(n-1,a,b,c)+rec(n-2,a,b,c)+rec(n-3,a,b,c);
+    return memo[n];
+}
+int main()
+{
+    int n,a,b,c;
+    scanf("%d",&n);
+    scanf("%d %d %d",&a,&b,&c);
+    for(int i=1;i<=20;i++)
+    {
+        memo[i]=-1;
+    }
+    int sum=rec(n,a,b,c);
+    printf("%d",sum);
+}
+
+
+//Searching - Linear or sequencial
+#include<iostream.h>
+#include<conio.h>
+#define max 25
+void main()
+{
+int a[max],n,i,j,count=0;
+clrscr();
+cout<<"\nEnter the Size of the Array :";
+cin>>n;
+if(n<=max)
+{
+cout<<"\nEnter the Array Elements :\n";
+for(i=0;i<n;i++)
+{
+cin>>a[i];
+}
+cout<<"\nEnter the Element to be Searched :";
+cin>>j;
+for(i=0;i<n;i++)
+{
+	if(a[i]==j)
+	{
+cout<<"\nElement found at the position : "<<i;
+count++;
+	}
+}
+if(count==0)
+cout<<"\nElement not found in the Array";
+else
+cout<<"\nThe Number of Occurance of the Element is : "<<count;
+}
+else
+cout<<"\nInvalid Size....";
+getch();
+}
+
+ROJECTS FOR C:
+1) Stone Paper Scissor
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+int opt,computer,lower=1,upper=3;
+computer=(rand()%(upper-lower+1))+1
+printf("\n*****GAME BEGINS*****);
+printf("\n 1) Stone \n 2) Paper \n 3) Scissor");
+printf("\n Enter your choices: \n 1 or 2 or 3");
+scanf("%d", &opt);
+printf("\n The computer choice is %d", computer);
+printf("\n Your choice is %d", opt);
+if(opt==1)
+{
+ if(computer==1)
+ printf("\n The game draws");
+  else if(computer==2)
+  printf("\n Computer wins");
+   else
+   printf("\n You win");
+}
+else if(opt==2)
+{
+ if(computer==1)
+ printf("\n You win");
+  else if(computer==2)
+  printf("\n The game draws");
+   else
+   printf("\n Computer wins");
+}
+else
+{
+ if(computer==1)
+ printf("\n Computer wins");
+  else if(computer==2)
+  printf("\n You win");
+   else
+   printf("\n The game draws");
+}
+getch()
+}
