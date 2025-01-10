@@ -1,0 +1,450 @@
+'''#to find whether a number is armstrong or not
+n=int(input())
+s=str(n)
+z=len(s)
+c=[]
+sum=0
+for i in s:
+    c.append(int(i)**z)
+for j in c:
+    sum=sum+j
+if sum==int(n):
+    print("It is armstrong number")
+else:
+    print("It is not an armstrong number")'''
+
+'''#to find factorial of a number
+n=int(input())
+fact=1
+for i in range (1,n+1):
+    fact=fact*i
+print (fact)'''
+
+'''#count the number of digits
+n=int(input())
+s=str(n)
+count=0
+for i in s:
+    count=count+1
+print(count)'''
+
+'''#to print numbers is prime number in range
+start=int(input())
+end=int(input())
+for i in range(start,end+1):
+    count=0
+    for j in range(1,i+1):
+        if i%j==0:
+            count+=1
+    if count==2:
+        print(i)'''
+
+'''#printing the prime numbers whose difference is also a prime number
+n=int(input())
+k=[]
+for i in range (1,n+1):
+    count=0
+    for j in range (1,i+1):
+        if i%j==0:
+            count=count+1
+    if count==2:
+        k.append(i)
+print(k)
+for a in k:
+    for b in k:
+        for c in k:
+            if a-b==c:
+                print("(",a,",",b,")","=",c,"(Prime Number)")'''
+
+
+'''#count all distinct pair with a difference equal to k
+size=int(input("Enter the size"))
+l=[]
+k=int(input("Enter the diff"))
+for i in range (0,size):
+    num=int(input())
+    l.append(num)
+print(l)
+count=0
+for a in l:
+    for b in l:
+        if a-b==k:
+            count=count+1
+            print("(",a,"-",b,")","=",k)
+print(count)'''
+
+'''average=15.999999
+l="{:.2f}".format(average)
+print(l)'''
+
+'''#to find and remove duplicates
+stri=input()
+first_time=[]
+dup=[]
+a=""
+for i in stri:
+    if i not in first_time:
+        first_time.append(i)
+    else:
+        if i not in dup:
+            dup.append(i)
+for i in dup:
+    print(i)'''
+
+'''#cubes of all numbers from 1 to n
+n=int(input())
+for i in range (1,n+1):
+    print (i**3)'''
+
+'''#to check the factors of n
+n=int(input())
+for i in range (1,n+1):
+    if n%i==0:
+        print(i)'''
+
+'''#factorial of a number"
+fact=int(input())
+mul=1
+for i in range (1,fact+1):
+    mul =mul*i
+print(num)'''
+
+
+'''#given a formula and print i value for different values
+c=50
+h=30
+lst=[]
+for i in range (0,3):
+    n=int(input())
+    lst.append(n)
+print(",".join(str(i)) for i in lst))
+lst1=[]
+for i in lst:
+    q=((2*c*i)/h)**0.5
+    lst1.append(int(q))
+print(",".join(str(i) for i in lst1))'''
+
+
+'''#to create a matrix with given rows and columns
+X,Y=input().splilt(',')
+X=int(X)
+Y=int(Y)
+array=[]
+for i in range (X):
+    row=[]
+    for j in range (Y):
+        row.append(i*j)
+    array.append(row)
+for row in array:
+    print(row)'''
+
+
+    
+'''#program to find words with both alphabets and numbers
+def alnum(stri):
+    words=stri.split()
+    result=[]
+    for i in words:
+        al=False
+        nu=False
+        for j in i:
+            if j.isalpha():
+                al=True
+            if j.isdigit():
+                nu=True
+            if al and nu:
+                result.append(i)
+    return result
+stri="Emma35 is a Data AI3"
+output=alnum(stri)
+for w in output:
+    print(w)'''
+
+'''#to check whether the elements in the list are alternative sign or not
+lst=[3,-2,5,-5,2,-8]
+for i in range (1,len(lst)):
+    if ((lst[i] >0 and lst[i-1]<0) or (lst[i]>0 and lst[i-1]>0)):
+        True
+print('true')'''
+
+'''#sum of 2+22+222+2222+22222
+n=int(input())
+lst=[2]
+start=2
+for i in range (1,n):
+    start=start+2*(10**i)
+    lst.append(start)
+print(lst)
+sum=0
+for i in lst:
+    sum=sum+i
+print(sum)'''
+
+
+'''#split a given string on hyphens
+str1=input()
+a=str1.split('-')
+for sub in a:
+    print(sub)'''
+
+'''#comma separated sequence of words as input and prints the words in a comma seperated after sorting them alphateically
+str1=input()
+x=str1.split(',')
+print(x)
+c=[]
+for i in x:
+    c.append(i)
+c=sorted(c)
+print(','.join(c))'''
+
+
+'''#accepts sequece of lines and prints after making all capitalized
+print("Enter lines of text type 'exit' to stop:")
+while True:
+    line=input()
+    if line.lower=='exit':
+        break
+    print(line.upper())'''
+
+
+'''#accepts sequence of whitespace and prints words alphabeitcally after removing all duplicates
+while True:
+    line=input()
+    line=line.split()
+    break
+lst=[]
+for i in line:
+    lst.append(i)
+print(lst)
+first=[]
+for i in lst:
+    if i not in first:
+        first.append(i)
+print(sorted(first))'''
+
+
+'''#accept a binary numbers separated by comma and print the numbers that divisible by 5 separated by commas
+lst=[]
+lst1=[]
+for i in range (0,4):
+    n=int(input())
+    lst.append(n)
+print(','.join(map(str,lst)))
+for i in lst:
+    if i%5==0:
+        lst1.append(i)
+print(','.join(map(str,lst1)))'''
+
+
+'''#a program that accepts sentence and calculate the number of letters and digits
+s=input()
+digits=0
+letters=0
+for i in s:
+    if i.isdigit():
+        digits+=1
+    elif i.isalpha():
+        letters+=1
+print(letters)
+print(digits)'''
+    
+    
+#to find the least digit of a number
+n=int(input())
+s=str(n)
+c=[]
+for i in s:
+    print(i)
+    c.append(i)
+print(c)
+print(min(c))
+
+#to check whether the last digit of a number is divisible by 7
+num=int(input("Enter a number: "))
+x=num%10
+if(x%7==0):
+    print("The number is divisible by 7")
+else:
+    print("The number is not divisible by 7")
+          
+
+IPS 3
+1) Password must have min 8 & max 16 characters, one Upper case, one lower case, and one special character.
+
+Sample Input : Vitchennai@1
+
+Sample Output: Valid Password
+
+IPS 10
+1) Mr. X is the manager at the MAX Joy hotel. The hotel has an infinite amount of rooms.
+One fine day, a finite number of tourists come to stay at the hotel.
+The tourists consist of:
+? A Captain.
+? An unknown group of families consisting of  K members per group where K ? 1.
+The Captain was given a separate room, and the rest were given one room per group.
+Mr. X has an unordered list of randomly arranged room entries. The list consists of the room numbers for all of the tourists. The room numbers will appear K times per group except for the Captain's room.
+Mr. X needs you to help him find the Captain's room number.
+The total number of tourists or the total number of groups of families is not known to you.
+You only know the value of  K and the room number list.
+
+Input Format
+The first line consists of an integer, K, the size of each group.
+The second line contains the unordered elements of the room number list.
+
+Output Format
+Output the Captain's room number.
+
+Sample Input
+5
+1 2 3 6 5 4 4 2 5 3 6 1 6 5 3 2 4 1 2 5 1 4 3 6 8 4 3 1 5 6 2 
+
+Sample Output
+8
+
+2) Create a dictionary by getting N numbers as keys from the user. For each key identify its length and store it as its value. 
+If the entered keys are not with different length numbers, then print 'invalid input'
+i/p:
+5 (size of the dictionary)
+10
+5000
+0
+121
+67789
+o/p:
+{10: 2, 5000: 4, 0: 1, 121: 3, 67789: 5}
+
+i/p:
+5 (size of the dictionary)
+10
+5000
+0
+121
+321
+o/p:
+invalid input
+ 
+
+3)  From the given sentence, create a word frequency count using dictionary and display.
+
+
+Sample input:
+Vellore Institute of Technology is one of the best private engineering college in Chennai. Vellore Institute of Technology Chennai is strategically positioned to respond to major industrial challenges.
+
+
+Sample output:
+{'Vellore': 2, 'Institute': 2, 'of': 3, 'Technology': 2, 'is': 2, 'one': 1, 'the': 1, 'best': 1, 'private': 1, 'engineering': 1, 'college': 1, 'in': 1, 'Chennai.': 1, 'Chennai': 1, 'strategically': 1, 'positioned': 1, 'to': 2, 'respond': 1, 'major': 1, 'industrial': 1, 'challenges.': 1}
+
+4)  Search a given element from a list of N numbers. Also, display the count of the element in the list.
+
+Consider the following lists for testing. [12,78,43,56,98,34,56,24,87,56,34,23] 
+
+Sample i/p:
+
+56 (search element)
+
+Sample o/p:
+
+yes
+
+3 (count)
+
+
+IPS 12
+
+1) Write a Python program to filter a list of integers into even, odd, and prime numbers using lambda functions.
+
+Input: 1 2 3 4 5 6 7
+Output:
+
+[2, 4, 6]
+[1, 3, 5, 7]
+[2, 3, 5, 7]
+
+2) Write a Python program to find the greatest common divisor (GCD) of two integers using recursion.
+
+Input :
+
+12
+
+14
+
+Output: 2 
+
+ 
+3)Write a Python program to create a Fibonacci series up to n using Lambda.
+
+Input: 3
+
+output: [0, 1, 1]
+
+
+4)  Write a Python program to generate all possible Subsequences using Recursion including the empty one.
+Input : 1 2 3
+Output : 
+[]
+[3]
+[2]
+[2, 3]
+[1]
+[1, 3]
+[1, 2]
+[1, 2, 3]
+
+Input : 1 2 
+Output : 
+[]
+[2]
+[1]
+[1, 2]
+
+
+
+fat mock
+
+1) A restaurant wants to analyze customer feedback to understand the sentiment and keywords commonly mentioned in the reviews. The goal is to identify feedback containing specific keywords (like "good," "excellent," "bad," etc.) and count the occurrences of these words, ignoring case sensitivity. You are also required to filter out any irrelevant words that don't contribute to sentiment analysis.
+
+Write a Python program that performs the following:
+
+Accepts a list of feedback strings from customers, where each feedback is a sentence.
+Filters each sentence using a regular expression to remove irrelevant words (e.g., articles and prepositions such as "a," "an," "the," "in," "at").
+Counts the occurrences of certain sentiment words such as "good," "bad," "excellent," "poor," and any other keywords specified by the restaurant, using a case-insensitive match.
+Outputs the total count of each sentiment word found across all feedback and provides a list of sentences where each sentiment word was found.
+Additional Requirements:
+
+Define a function analyze_feedback(feedback_list, keywords) that performs the feedback analysis.
+Use regular expressions to filter out irrelevant words from each feedback sentence.
+Make use of lists and dictionary structures to store and display results.
+ 
+
+Example Input and Output
+
+Input:
+
+feedback_list = [
+
+    ‘The food was excellent and the service was good.’,
+
+    ‘I had a bad experience; the food was poor in quality.’,
+
+    ‘Service was good, but the food was not up to the mark.’,
+
+    ‘Excellent ambiance and excellent service!’
+
+]
+
+keywords = ["good", "bad", "excellent", "poor"]
+
+Expected Output:
+
+Sentiment Counts:
+
+good: 2
+
+bad: 1
+
+excellent: 3
+
+poor: 1
+            
+
+    
